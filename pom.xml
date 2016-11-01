@@ -34,7 +34,7 @@
 	<dependency>
 		<groupId>com.ociweb</groupId>
 		<artifactId>Pronghorn</artifactId>
-		<version>0.0.9-SNAPSHOT</version>
+		<version>0.0.10-SNAPSHOT</version>
 	</dependency>
 
 	<dependency>
