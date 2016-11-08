@@ -63,13 +63,6 @@ public class PBSpeedProducer implements Runnable {
             .computeInt32Size(4, sample.getDate());
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(5, sample.getSampleCount());
-        for (int i = 0; i < sample.getSamples().size(); i++) {
-            size += com.google.protobuf.CodedOutputStream.computeTagSize(6);
-            final int tmp_size = getSerializedSize(sample.getSamples().get(i));
-//            System.out.println("My Sample: "+sample.getSamples().get(i).getId()+" Serialized Size: "+tmp_size);
-
-            size += com.google.protobuf.CodedOutputStream.computeRawVarint32Size(tmp_size) + tmp_size;
-        }
         memoizedSerializedSize = size;
         return size;
       }
